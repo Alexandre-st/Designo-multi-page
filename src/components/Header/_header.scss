@@ -1,0 +1,76 @@
+@use "../../styles/variables/mixins" as *;
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 3.5rem 0 3.4rem 0;
+
+  @include mq(tablet) {
+    margin: 6.4rem 0;
+  }
+
+  &-nav {
+    display: none;
+
+    @include mq(tablet) {
+      display: block;
+
+      &-list {
+        display: flex;
+        gap: 4.2rem;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        letter-spacing: 2px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &-logo {
+    width: 20.2rem;
+    height: 2.7rem
+  }
+
+  &-menu {
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+
+  &-hamburger {
+    width: 2.4rem;
+    height: 2rem;
+  }
+
+  &-close {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.nav {
+  position: absolute;
+  left: -2.4rem;
+  right: -2.4rem;
+  top: 5rem;
+  height: 100vh;
+  
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    background-color: #000;
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #fff;
+    z-index: 2;
+    padding: 4.8rem 2.4rem;
+
+    a {
+      z-index: 3;
+    }
+  }
+}

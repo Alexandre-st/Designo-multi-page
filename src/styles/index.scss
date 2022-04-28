@@ -1,3 +1,7 @@
 // == BASE == //
 @use "./base/reset";
 @use "./base/base";
+
+// == COMPONENTS == //
+@use "../components/Header/header";
+@use "../components/Home/home";
