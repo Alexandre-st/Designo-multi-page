@@ -1,4 +1,52 @@
+@use "../../styles/variables/mixins" as *;
+
 .hero {
   position: relative;
+  background-color: #E7816B;
   z-index: 0;
+  background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
+  // background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  height: 84.3rem;
+  overflow: hidden;
+
+  @include mq(tablet) {
+    margin: 0 3.9rem 0 4rem;
+    border-radius: 1.5rem;
+  }
+
+
+  &-content {
+
+    &-text {
+      color: #FFFFFF;
+      padding-top: 8rem;
+      text-align: center;
+
+      h1 {
+        text-transform: inherit;
+      }
+
+      p {
+        margin: 1.4rem 0 2.4rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+
+      button {
+        margin: 0 auto;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      width: fit-content;
+      left: 0;
+      right: 0;
+      top: 47.2rem;
+      margin: 0 auto;
+      filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
+    }
+  }
 }
