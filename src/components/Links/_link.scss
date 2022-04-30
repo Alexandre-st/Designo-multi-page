@@ -1,0 +1,59 @@
+@use "../../styles/variables/mixins" as *;
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  text-align: center;
+  margin-top: 12rem;
+  color: #FFFFFF;
+
+  &-content {
+
+    &-web {
+      background-image: url("../../assets/home/mobile/image-web-design.jpg");
+      @include mask-image;
+
+      @include mq(tablet) {
+        background-image: url("../../assets/home/tablet/image-web-design.jpg");
+      }
+    }
+
+    &-app {
+      background-image: url("../../assets/home/mobile/image-app-design.jpg");
+      @include mask-image;
+      @include mq(tablet) {
+        background-image: url("../../assets/home/tablet/image-app-design.jpg");
+      }
+    }
+
+    &-graphic {
+      background-image: url("../../assets/home/mobile/image-graphic-design.jpg");
+      @include mask-image;
+      @include mq(tablet) {
+        background-image: url("../../assets/home/tablet/image-graphic-design.jpg");
+      }
+    }
+  }
+
+  &-contain {
+    position: relative;
+    z-index: 2;
+    padding-top: 9rem;
+
+    h2 {
+      margin-bottom: 1.2rem;
+
+      @include mq(tablet) {
+        margin-bottom:2.4rem
+      }
+    }
+
+    h4 {
+      display: flex;
+      gap: 1.6rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
