@@ -13,13 +13,11 @@ const Home = () => {
           <p className="text">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
           <button className="button">Learn More</button>
         </div>
-        <div className="hero-content-img">
-          <picture>
-            <source media="(min-width: 1064px)" srcSet={CellularDesktop} />
-            <source media="(min-width: 768px)" srcSet={CellularTablet} />
-            <img src={CellularPhone} alt="Cellular Frame" />
-          </picture>
-        </div>
+        <picture className="hero-content-img">
+          <source srcSet={CellularDesktop} media="(min-width: 1024px)" />
+          <source srcSet={CellularTablet}  media="(min-width: 768px)" />
+          <img src={CellularPhone} alt="Cellular Frame" />
+        </picture>
       </div>
     </section>
   );

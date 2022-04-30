@@ -5,7 +5,6 @@
   background-color: #E7816B;
   z-index: 0;
   background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
-  // background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 50%;
   height: 84.3rem;
@@ -14,39 +13,95 @@
   @include mq(tablet) {
     margin: 0 3.9rem 0 4rem;
     border-radius: 1.5rem;
+    background-position-x: 16rem;
   }
 
+  @include mq(laptop) {
+    height: 64rem;
+    background-position-x: 48rem;
+  }
+
+  @include mq(desktop) {
+    margin: auto;
+  }
 
   &-content {
+    color: #FFFFFF;
+    padding-top: 8rem;
+    text-align: center;
+
+    @include mq(tablet) {
+      margin: 0 5.8rem;
+      padding-top: 6rem;
+    }
+
+    @include mq(laptop) {
+      display: flex;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      gap: 6rem;
+    }
 
     &-text {
-      color: #FFFFFF;
-      padding-top: 8rem;
-      text-align: center;
+
+      @include mq(laptop) {
+        padding: 14.5rem 0 0 5.6rem; 
+        max-width: 54rem;
+      }
+
+      @include mq(desktop) {
+        padding: 14.3rem 0 0 9.5rem;
+        max-width: 57rem;
+      }
 
       h1 {
         text-transform: inherit;
       }
 
       p {
-        margin: 1.4rem 0 2.4rem;
+        margin: 1.4rem 0 2.4rem 0;
         font-size: 1.5rem;
         line-height: 2.5rem;
+
+        @include mq(tablet) {
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+          margin: 2.4rem 3.9rem 1.9rem 3.8rem;
+        }
+
+        @include mq(laptop) {
+          margin: 2.1rem 0 4rem 0;
+        }
       }
 
       button {
-        margin: 0 auto;
+        margin: auto;
+
+        @include mq(laptop) {
+          margin: 0;
+        }
       }
     }
 
     &-img {
       position: absolute;
-      width: fit-content;
+      width: max-content;
       left: 0;
       right: 0;
       top: 47.2rem;
       margin: 0 auto;
       filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
+
+      @include mq(tablet) {
+        top: 46.2rem;
+      }
+
+      @include mq(laptop) {
+        position: relative;
+        top: 15rem;
+      }
+
     }
   }
 }
