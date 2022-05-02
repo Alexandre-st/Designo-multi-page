@@ -25,8 +25,10 @@ const Home = () => {
 
       <section className="link container">
         <Link linkStyle="link-content-web" title="Web Design" text="View Projects" />
-        <Link linkStyle="link-content-app" title="App Design" text="View Projects" />
-        <Link linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
+        <div className="link-cut">
+          <Link linkStyle="link-content-app" title="App Design" text="View Projects" />
+          <Link linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
+        </div>
       </section>
     </main>
   );

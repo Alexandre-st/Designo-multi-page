@@ -32,6 +32,7 @@ h2 {
   @include mq(tablet) {
     font-size: 4rem;
     line-height: 4.8rem;
+    letter-spacing: 2px;
   }
 }
 

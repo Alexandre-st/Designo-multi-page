@@ -8,38 +8,70 @@
   margin-top: 12rem;
   color: #FFFFFF;
 
-  &-content {
+  @include mq(laptop) {
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 15.8rem;
+  }
 
-    &-web {
-      background-image: url("../../assets/home/mobile/image-web-design.jpg");
-      @include mask-image;
+  &-content-web {
+    background-image: url("../../assets/home/mobile/image-web-design.jpg");
+
+    h2 {
+      padding-top: 9rem;
 
       @include mq(tablet) {
-        background-image: url("../../assets/home/tablet/image-web-design.jpg");
+        padding-top: 5.3rem;
+      }
+
+      @include mq(laptop) {
+        padding-top: 27.3rem;
       }
     }
 
-    &-app {
-      background-image: url("../../assets/home/mobile/image-app-design.jpg");
-      @include mask-image;
-      @include mq(tablet) {
-        background-image: url("../../assets/home/tablet/image-app-design.jpg");
-      }
+    @include mask-image;
+    @include mq(tablet) {
+      background-image: url("../../assets/home/tablet/image-web-design.jpg");
+      height: 20rem;
     }
-
-    &-graphic {
-      background-image: url("../../assets/home/mobile/image-graphic-design.jpg");
-      @include mask-image;
-      @include mq(tablet) {
-        background-image: url("../../assets/home/tablet/image-graphic-design.jpg");
-      }
+    @include mq(laptop) {
+      background-image: url("../../assets/home/desktop/image-web-design-large.jpg");
+      flex: 2;
+      height: 64rem
     }
   }
 
-  &-contain {
+  &-content-app {
+    background-image: url("../../assets/home/mobile/image-app-design.jpg");
+    @include mask-image;
+    @include mq(tablet) {
+      background-image: url("../../assets/home/tablet/image-app-design.jpg");
+      height: 20rem;
+    }
+    @include mq(laptop) {
+      background-image: url("../../assets/home/desktop/image-app-design.jpg");
+      height: 30.8rem;
+    }
+  }
+
+  &-content-graphic {
+    background-image: url("../../assets/home/mobile/image-graphic-design.jpg");
+    @include mask-image;
+    @include mq(tablet) {
+      background-image: url("../../assets/home/tablet/image-graphic-design.jpg");
+      height: 20rem;
+    }
+    @include mq(laptop) {
+      background-image: url("../../assets/home/desktop/image-graphic-design.jpg");
+      height: 30.8rem;
+    }
+  }
+  
+
+  &-content {
     position: relative;
     z-index: 2;
-    padding-top: 9rem;
+    // padding-top: 9rem;
 
     h2 {
       margin-bottom: 1.2rem;
@@ -54,6 +86,25 @@
       gap: 1.6rem;
       justify-content: center;
       align-items: center;
+    }
+  }
+
+  &-cut {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    flex: 2;
+
+    h2 {
+      padding-top: 9rem;
+
+      @include mq(tablet) {
+        padding-top: 5.3rem;
+      }
+
+      @include mq(laptop) {
+        padding-top: 10.7rem;
+      }
     }
   }
 }
