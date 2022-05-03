@@ -39,3 +39,15 @@
     z-index: 1;
   }
 }
+
+// Background images
+@mixin bg-image {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.2;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+}

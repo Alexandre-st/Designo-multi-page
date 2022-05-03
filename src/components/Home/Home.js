@@ -3,6 +3,9 @@ import React from 'react';
 import CellularPhone from '../../assets/home/desktop/image-hero-phone.png';
 import CellularTablet from '../../assets/home/desktop/image-hero-tablet.png';
 import CellularDesktop from '../../assets/home/desktop/image-hero-desktop.png';
+import Passionate from '../../assets/home/desktop/illustration-passionate.svg';
+import Resourceful from '../../assets/home/desktop/illustration-resourceful.svg';
+import Friendly from '../../assets/home/desktop/illustration-friendly.svg';
 import Link from '../Links/Link';
 
 const Home = () => {
@@ -23,11 +26,57 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Link Part */}
       <section className="link container">
         <Link linkStyle="link-content-web" title="Web Design" text="View Projects" />
         <div className="link-cut">
           <Link linkStyle="link-content-app" title="App Design" text="View Projects" />
           <Link linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
+        </div>
+      </section>
+
+      {/* Work Part */}
+      <section className="work container">
+        <div className="work-container">
+          <div className="work-content">
+          <div className="work-content-img">
+            <div className="work-img-passionate">
+              <img src={Passionate} alt="Passionate job" />
+            </div>
+          </div>
+          <div className="work-content-text">
+            <h3>PASSIONATE</h3>
+            <p className="text">
+              Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.
+            </p>
+          </div>
+          </div>
+          <div className="work-content">
+          <div className="work-content-img">
+            <div className="work-img-resourceful">
+              <img src={Resourceful} alt="Resourceful approach" />
+            </div>
+          </div>
+          <div className="work-content-text">
+            <h3>RESOURCEFUL</h3>
+            <p className="text">
+              Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.
+            </p>
+          </div>
+          </div>
+          <div className="work-content">
+            <div className="work-content-img">
+              <div className="work-img-friendly">
+                <img src={Friendly} alt="Friendly share" />
+              </div>
+            </div>
+            <div className="work-content-text">
+              <h3>FRIENDLY</h3>
+              <p className="text">
+                We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
