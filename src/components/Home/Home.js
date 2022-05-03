@@ -7,6 +7,7 @@ import Passionate from '../../assets/home/desktop/illustration-passionate.svg';
 import Resourceful from '../../assets/home/desktop/illustration-resourceful.svg';
 import Friendly from '../../assets/home/desktop/illustration-friendly.svg';
 import Link from '../Links/Link';
+import TalkAbout from '../TalkAbout/TalkAbout';
 
 const Home = () => {
   return ( 
@@ -78,6 +79,11 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Talk About Part */}
+      <section className="talk container">
+        <TalkAbout />
       </section>
     </main>
   );

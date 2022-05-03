@@ -47,6 +47,18 @@ h4 {
   letter-spacing: 5px;
 }
 
+h5 {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 500;
+  margin: 0;
+
+  @include mq(tablet) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
 .container {
   position: relative;
   max-width: 111rem;

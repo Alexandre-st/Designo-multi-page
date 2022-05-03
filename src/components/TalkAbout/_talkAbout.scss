@@ -1,0 +1,72 @@
+@use "../../styles/variables/mixins" as *;
+
+.talk {
+  margin-top: 12.1rem;
+
+  @include mq(tablet) {
+    margin-top: 6.7rem;
+  }
+
+  @include mq(laptop) {
+    margin-top: 16rem
+  }
+
+  &-content {
+    background-color: #E7816B;
+    background-image: url("../../assets/shared/desktop/bg-pattern-call-to-action.svg");
+    background-position-x: 45%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    padding: 6.4rem 2.4rem 6.4rem 2.4rem;
+    border-radius: 15px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include mq(tablet) {
+      padding: 5.7rem 5.9rem 5.7rem 5.8rem;
+      background-position-x: 0;
+    }
+
+    @include mq(laptop) {
+      flex-direction: row;
+      text-align: left;
+      gap: 30.9rem;
+      padding: 7.2rem 9.6rem 7.2rem 9.5rem;
+      align-items: center;
+      background-position-x: 100%;
+    }
+
+    h5 {
+      @include mq(tablet) {
+        padding: 0 11.9rem;
+      }
+      @include mq(laptop) {
+        padding: 0;
+      }
+
+      @include mq(desktop) {
+        padding: 0 19rem 0 0;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      margin: 1.6rem 0 3.2rem 0;
+
+      @include mq(tablet) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        padding: 0 7rem;
+      }
+
+      @include mq(laptop) {
+        padding: 0;
+        padding: 0 2rem 0 0;
+      }
+    }
+  }
+}
