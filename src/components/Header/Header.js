@@ -8,13 +8,13 @@ const Header = () => {
   return (
     <header className="container">
       <div className="header">
-        <img className="header-logo" src={designoBlack} alt="Designo" />
+        <img className="logo" src={designoBlack} alt="Designo" />
 
         <nav className="header-nav">
           <ul className="header-nav-list">
-          <Link to="/"><li>OUR COMPANY</li></Link>
-          <Link to="/"><li>LOCATIONS</li></Link>
-          <Link to="/"><li>CONTACT</li></Link>
+          <Link to="/"><li className="li_nk">OUR COMPANY</li></Link>
+          <Link to="/"><li className="li_nk">LOCATIONS</li></Link>
+          <Link to="/"><li className="li_nk">CONTACT</li></Link>
           </ul>
         </nav>
 

@@ -1,0 +1,100 @@
+@use "../../styles/variables/mixins" as *;
+
+.footer {
+  background-color: #1D1C1E;
+  margin-top: -18.9rem;
+
+  @include mq(tablet) {
+    margin-top: -8.6rem;
+  }
+
+  @include mq(laptop) {
+    margin-top: -7.2rem;
+  }
+
+  &-container {
+    padding: 25.3rem 2.4rem 6.4rem 2.4rem;
+    text-align: center;
+    color: #FFFFFF;
+
+    @include mq(tablet) {
+      padding: 16.6rem 3.9rem 8rem 3.9rem;
+      text-align: left;
+    }
+
+    @include mq(laptop) {
+      padding: 14.4rem 3.9rem 7.2rem 3.9rem;
+    }
+
+    @include mq(desktop) {
+      padding:14.4rem 0 7.2rem 0;
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 11.8rem;
+      margin-bottom: 7.2rem;
+    }
+    
+    &-link {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+      margin-top: 6.5rem;
+      
+      @include mq(tablet) {
+        flex-direction: row;
+        margin-top: 0;
+        gap: 4rem;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      gap: 5rem;
+    }
+
+    @include mq(laptop) {
+      gap: 20rem;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      opacity: 0.5;
+
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+
+    &-link {
+      display: flex;
+      gap: 1.6rem;
+      margin: auto;
+      margin-top: 4.2rem;
+
+      @include mq(tablet) {
+        margin-right: inherit;
+      }
+
+      img {
+        width: fit-content;
+      }
+    }
+  }
+}
