@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import CellularPhone from '../../assets/home/desktop/image-hero-phone.png';
 import CellularTablet from '../../assets/home/desktop/image-hero-tablet.png';
@@ -6,8 +7,8 @@ import CellularDesktop from '../../assets/home/desktop/image-hero-desktop.png';
 import Passionate from '../../assets/home/desktop/illustration-passionate.svg';
 import Resourceful from '../../assets/home/desktop/illustration-resourceful.svg';
 import Friendly from '../../assets/home/desktop/illustration-friendly.svg';
-import Link from '../Links/Link';
-import TalkAbout from '../TalkAbout/TalkAbout';
+import Links from '../../components/Links/Links';
+import TalkAbout from '../../components/TalkAbout/TalkAbout';
 
 const Home = () => {
   return ( 
@@ -29,10 +30,16 @@ const Home = () => {
 
       {/* Link Part */}
       <section className="link container">
-        <Link linkStyle="link-content-web" title="Web Design" text="View Projects" />
+        <Link to="/design">
+          <Links linkStyle="link-content-web" title="Web Design" text="View Projects" />
+        </Link>
         <div className="link-cut">
-          <Link linkStyle="link-content-app" title="App Design" text="View Projects" />
-          <Link linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
+          <Link to="/">
+            <Links linkStyle="link-content-app" title="App Design" text="View Projects" />
+          </Link>
+          <Link to="/">
+            <Links linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
+          </Link>
         </div>
       </section>
 

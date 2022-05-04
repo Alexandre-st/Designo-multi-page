@@ -1,0 +1,33 @@
+@use "../../styles/variables/mixins" as *;
+
+.web {
+  @include bg-hero;
+  background-image: url("../../assets/web-design/desktop/bg-pattern-intro-web.svg");
+  background-position-x: 100%;
+
+  @include mq(tablet) {
+    background-image: url("../../assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg");
+    background-position-x: 0%;
+    background-position-y: 50%;
+  }
+
+  @include mq(laptop) {
+    background-position-x: 100%;
+  }
+
+  &-content {
+    padding: 10.5rem 2.4rem;
+    text-align: center;
+    color: #FFFFFF;
+
+    @include mq(tablet) {
+      padding: 6.4rem 0;
+      width: 40.3rem;
+      margin: auto; 
+    }
+
+    h1 {
+      margin-bottom: 2.4rem;
+    }
+  }
+}

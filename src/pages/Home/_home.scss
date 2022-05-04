@@ -1,28 +1,19 @@
 @use "../../styles/variables/mixins" as *;
 
 .hero {
-  position: relative;
-  background-color: #E7816B;
-  z-index: 0;
+  @include bg-hero;
   background-image: url('../../assets/home/desktop/bg-pattern-hero-home.svg');
-  background-repeat: no-repeat;
   background-position-y: 50%;
   height: 84.3rem;
   overflow: hidden;
 
   @include mq(tablet) {
-    margin: 0 3.9rem 0 4rem;
-    border-radius: 1.5rem;
     background-position-x: 16rem;
   }
 
   @include mq(laptop) {
     height: 64rem;
     background-position-x: 48rem;
-  }
-
-  @include mq(desktop) {
-    margin: auto;
   }
 
   &-content {
