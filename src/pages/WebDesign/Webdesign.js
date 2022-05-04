@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import Links from '../../components/Links/Links';
 
 import CardPicture from '../../components/CardPicture/CardPicture';
-
 import ExpressProject from '../../assets/web-design/desktop/image-express.jpg';
 import TransferProject from '../../assets/web-design/desktop/image-transfer.jpg';
 import PhotonProject from '../../assets/web-design/desktop/image-photon.jpg';
 import BuilderProject from '../../assets/web-design/desktop/image-builder.jpg';
 import BlogRProject from '../../assets/web-design/desktop/image-blogr.jpg';
 import CampProject from '../../assets/web-design/desktop/image-camp.jpg';
+import TalkAbout from '../../components/TalkAbout/TalkAbout';
 
 const WebDesign = () => {
   return ( 
@@ -55,6 +58,18 @@ const WebDesign = () => {
           />
         </div>
       </section>
+      <section className="link container">
+      
+          <Link className="link-size" to="/">
+            <Links linkStyle="link-content-app" title="App Design" text="View Projects" />
+          </Link>
+
+          <Link className="link-size" to="/">
+            <Links linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
+          </Link>
+      </section>
+
+      <TalkAbout />
     </main>
   );
 }

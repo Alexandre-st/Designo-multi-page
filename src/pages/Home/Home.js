@@ -30,10 +30,10 @@ const Home = () => {
 
       {/* Link Part */}
       <section className="link container">
-        <Link to="/design">
+        <Link to="/design" style={{ flex : "2" }}>
           <Links linkStyle="link-content-web" title="Web Design" text="View Projects" />
         </Link>
-        <div className="link-cut">
+        <div className="link-cut" style={{ flex : "2" }}>
           <Link to="/">
             <Links linkStyle="link-content-app" title="App Design" text="View Projects" />
           </Link>
@@ -89,9 +89,7 @@ const Home = () => {
       </section>
 
       {/* Talk About Part */}
-      <section className="talk container">
-        <TalkAbout />
-      </section>
+      <TalkAbout />
     </main>
   );
 }
