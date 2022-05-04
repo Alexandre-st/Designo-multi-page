@@ -59,10 +59,10 @@ const WebDesign = () => {
         </div>
       </section>
       <section className="link container">
-        <Link className="link-size" to="/">
+        <Link className="link-size" to="/graphic-design">
           <Links linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
         </Link>
-        <Link className="link-size" to="/">
+        <Link className="link-size" to="/app-design">
           <Links linkStyle="link-content-app" title="App Design" text="View Projects" />
         </Link>
       </section>

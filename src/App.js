@@ -8,6 +8,7 @@ import AppDesign from './pages/AppDesign/AppDesign';
 import Footer from './components/Footer/Footer';
 
 import './styles/index.scss';
+import GraphicDesign from './pages/GraphicDesign/GraphicDesign';
 
 const App = () => {
   return ( 
@@ -18,6 +19,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/web-design" element={<WebDesign />} />
         <Route exact path="/app-design" element={<AppDesign />} />
+        <Route exact path="/graphic-design" element={<GraphicDesign />} />
       </Routes>
       <Footer />
     </Router>

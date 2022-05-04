@@ -59,7 +59,7 @@ const AppDesign = () => {
             text="View Projects"
           />
         </Link>
-        <Link to="/" className="link-size">
+        <Link to="/graphic-design" className="link-size">
           <Links 
             linkStyle="link-size-graphic" 
             title="Graphic Design" 

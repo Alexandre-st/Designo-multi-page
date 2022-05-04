@@ -37,7 +37,7 @@ const Home = () => {
           <Link to="/app-design">
             <Links linkStyle="link-content-app" title="App Design" text="View Projects" />
           </Link>
-          <Link to="/">
+          <Link to="/graphic-design">
             <Links linkStyle="link-content-graphic" title="Graphic Design" text="View Projects" />
           </Link>
         </div>
