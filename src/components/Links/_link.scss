@@ -122,5 +122,22 @@
      @include mq(laptop) {
        width: 54.1rem;
      }
+     &-web {
+       background-image: url("../../assets/home/desktop/image-web-design-small.jpg");
+       @include mask-image;
+       
+       @include mq(laptop) {
+        height: 30.8rem;
+      }
+      }
+      
+      &-graphic {
+        background-image: url("../../assets/home/desktop/image-graphic-design.jpg");
+        @include mask-image;
+
+        @include mq(laptop) {
+          height: 30.8rem;
+        }
+     }
   }
 }

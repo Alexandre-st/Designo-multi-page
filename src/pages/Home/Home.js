@@ -30,11 +30,11 @@ const Home = () => {
 
       {/* Link Part */}
       <section className="link container">
-        <Link to="/design" style={{ flex : "2" }}>
+        <Link to="/web-design" style={{ flex : "2" }}>
           <Links linkStyle="link-content-web" title="Web Design" text="View Projects" />
         </Link>
         <div className="link-cut" style={{ flex : "2" }}>
-          <Link to="/">
+          <Link to="/app-design">
             <Links linkStyle="link-content-app" title="App Design" text="View Projects" />
           </Link>
           <Link to="/">

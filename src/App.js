@@ -4,6 +4,7 @@ import ScrollToTop from './ScrollToTop';
 import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
 import WebDesign from './pages/WebDesign/Webdesign';
+import AppDesign from './pages/AppDesign/AppDesign';
 import Footer from './components/Footer/Footer';
 
 import './styles/index.scss';
@@ -15,7 +16,8 @@ const App = () => {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/design" element={<WebDesign />} />
+        <Route exact path="/web-design" element={<WebDesign />} />
+        <Route exact path="/app-design" element={<AppDesign />} />
       </Routes>
       <Footer />
     </Router>

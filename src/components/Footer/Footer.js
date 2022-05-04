@@ -13,7 +13,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container container">
         <div className="footer-header">
-          <img className="logo" src={FooterLogo} alt="Designo" />
+          <Link to="/">
+            <img className="logo" src={FooterLogo} alt="Designo" />
+          </Link>
           <div className="footer-header-link">
             <Link to="/"><li className="li_nk">OUR COMPANY</li></Link>
             <Link to="/"><li className="li_nk">LOCATIONS</li></Link>
