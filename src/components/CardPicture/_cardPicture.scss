@@ -1,0 +1,78 @@
+@use "../../styles/variables/mixins" as *;
+
+.card {
+  margin-top: 9.6rem;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7.2rem;
+
+    @include mq(laptop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+  }
+
+  &-content {
+    background-color: #FDF3F0;
+    border-radius: 15px;
+
+    @include mq(tablet) {
+      display: flex;
+    }
+
+    @include mq(laptop) {
+      flex-direction: column;
+    }
+
+    &-image {
+      
+      @include mq(tablet) {
+        flex: 2;
+      }
+
+      @include mq(laptop) {
+        width: 35rem;
+        height: 32rem;
+      }
+      
+      img {
+        border-radius: 15px 15px 0 0;
+        height: 100%;
+
+        @include mq(tablet) {
+          border-radius: 15px 0 0 15px;
+        }
+
+        @include mq(laptop) {
+          border-radius: 15px 15px 0 0;
+        }
+      }
+
+
+    }
+
+    &-text {
+      padding: 3.2rem 2.91rem 3.2rem 2.99rem;
+      text-align: center;
+
+      @include mq(tablet) {
+        flex: 2;
+        padding: 10.9rem 4.1rem 10.9rem 3.2rem;
+      }
+
+      @include mq(laptop) {
+        width: 35rem;
+        padding: 3.2rem;
+      }
+
+      h3 {
+        color: #E7816B;
+        letter-spacing: 5px;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+}
