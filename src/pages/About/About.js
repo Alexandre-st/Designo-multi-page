@@ -2,6 +2,7 @@ import React from 'react';
 
 import TalkAbout from '../../components/TalkAbout/TalkAbout';
 import TeamWorkPicture from '../../assets/about/mobile/image-about-hero.jpg';
+import WomanPicture from '../../assets/about/mobile/image-world-class-talent.jpg';
 
 const About = () => {
   return ( 
@@ -20,9 +21,11 @@ const About = () => {
         </div>
       </section>
 
-      <section className="infos">
+      <section className="infos container">
         <div className="infos-content">
-          <div className="infos-content-img"></div>
+          <div className="infos-content-img">
+            <img src={WomanPicture} alt="Woman stand in front of a wall" />
+          </div>
           <div className="infos-content-text">
             <h2>World-class talent</h2>
             <p className="small-text">
@@ -31,6 +34,9 @@ const About = () => {
             </p>
           </div>
         </div>
+      </section>
+      <section className="button-location container">
+        
       </section>
 
       <TalkAbout />

@@ -6,8 +6,7 @@
   
     &-img {
       position: absolute;
-      height: 32rem;
-      max-width: 48rem;
+      width: max-content;
       margin: auto;
       left: 0;
       right: 0;
@@ -22,6 +21,36 @@
         text-transform: initial;
         padding-top: 8rem;
         margin-bottom: 2.4rem;
+      }
+    }
+  }
+}
+
+.infos {
+  background-color: #FDF3F0;
+  height: 86.5rem;
+
+  &-content {
+
+    &-img {
+      position: absolute;
+      width: fit-content;
+      margin: auto;
+      left: 0;
+      right: 0;
+    }
+
+    &-text {
+      padding-top: 32rem;
+      text-align: center;
+
+      h2 {
+        padding-top: 8rem;
+        color: #E7816B;
+        text-transform: none;
+        margin-bottom: 2.4rem;
+        font-size: 32px;
+        line-height: 36px;
       }
     }
   }
