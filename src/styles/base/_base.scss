@@ -85,6 +85,17 @@ h5 {
   font-weight: 400;
 }
 
+.small-text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+
+  @include mq(tablet) {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
 .li_nk {
   font-size: 1.4rem;
   line-height: 1.4rem;

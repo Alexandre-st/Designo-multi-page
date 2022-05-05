@@ -17,7 +17,7 @@ const Home = () => {
         <div className="hero-content">
           <div className="hero-content-text">
             <h1>Award-winning custom designs and digital branding solutions</h1>
-            <p className="text">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
+            <p className="small-text">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
             <button className="button">Learn More</button>
           </div>
           <picture className="hero-content-img">

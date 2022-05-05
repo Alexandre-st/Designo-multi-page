@@ -1,0 +1,28 @@
+.about {
+  background-color: #E7816B;
+
+  &-header {
+    height: 71.5rem;
+  
+    &-img {
+      position: absolute;
+      height: 32rem;
+      max-width: 48rem;
+      margin: auto;
+      left: 0;
+      right: 0;
+    }
+
+    &-text {
+      padding-top: 32rem;
+      text-align: center;
+      color: #FFFFFF;
+
+      h1 {
+        text-transform: initial;
+        padding-top: 8rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+}

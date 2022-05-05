@@ -2,7 +2,9 @@
 @use "./base/reset";
 @use "./base/base";
 
+// == PAGES == //
 @use "../pages/Home/home";
+@use "../pages/About/about";
 @use "../pages/WebDesign/webDesign";
 
 // == COMPONENTS == //

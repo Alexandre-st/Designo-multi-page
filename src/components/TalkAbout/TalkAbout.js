@@ -6,7 +6,7 @@ const TalkAbout = () => {
       <div className="talk-content">
         <div className="talk-content-text">
           <h5>Let’s talk about your project</h5>
-          <p className="text">
+          <p className="small-text">
             Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
           </p>
         </div>

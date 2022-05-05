@@ -16,7 +16,7 @@ const GraphicDesign = () => {
       <section className="web container">
         <div className="web-content">
           <h1>Graphic Design</h1>
-          <p className="text">
+          <p className="small-text">
             We deliver eye-catching branding materials that are tailored to meet your business objectives.
           </p>
         </div>

@@ -16,7 +16,7 @@ const AppDesign = () => {
     <section className="web container">
         <div className="web-content">
           <h1>App Design</h1>
-          <p className="text">
+          <p className="small-text">
             Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.
           </p>
         </div>

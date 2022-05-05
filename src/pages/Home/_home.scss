@@ -52,12 +52,8 @@
 
       p {
         margin: 1.4rem 0 2.4rem 0;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
 
         @include mq(tablet) {
-          font-size: 1.6rem;
-          line-height: 2.6rem;
           margin: 2.4rem 3.9rem 1.9rem 3.8rem;
         }
 
