@@ -19,7 +19,7 @@ const Menu = () => {
           <div className="nav">
             <nav>
             <ul className="nav-list">
-              <Link to="/">
+              <Link to="/about">
                 <li>OUR COMPANY</li>
               </Link>
               <Link to="/">
