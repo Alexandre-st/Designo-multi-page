@@ -2,25 +2,19 @@
   background-color: #E7816B;
 
   &-header {
-    height: 71.5rem;
+    // height: 71.5rem;
   
     &-img {
-      position: absolute;
-      width: max-content;
+      max-width: 48rem;
       margin: auto;
-      left: 0;
-      right: 0;
     }
 
     &-text {
-      padding-top: 32rem;
       text-align: center;
       color: #FFFFFF;
 
       h1 {
         text-transform: initial;
-        padding-top: 8rem;
-        margin-bottom: 2.4rem;
       }
     }
   }
@@ -28,24 +22,19 @@
 
 .infos {
   background-color: #FDF3F0;
-  height: 86.5rem;
+  // height: 86.5rem;
 
   &-content {
 
     &-img {
-      position: absolute;
-      width: fit-content;
+      max-width: 48rem;
       margin: auto;
-      left: 0;
-      right: 0;
     }
 
     &-text {
-      padding-top: 32rem;
       text-align: center;
 
       h2 {
-        padding-top: 8rem;
         color: #E7816B;
         text-transform: none;
         margin-bottom: 2.4rem;

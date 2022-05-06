@@ -3,11 +3,15 @@ import React from 'react';
 import TalkAbout from '../../components/TalkAbout/TalkAbout';
 import TeamWorkPicture from '../../assets/about/mobile/image-about-hero.jpg';
 import WomanPicture from '../../assets/about/mobile/image-world-class-talent.jpg';
+import CanadaPicture from '../../assets/shared/desktop/illustration-canada.svg';
+import AustraliaPicture from '../../assets/shared/desktop/illustration-australia.svg';
+import UnitedKingdomPicture from '../../assets/shared/desktop/illustration-united-kingdom.svg';
+import HandPicture from '../../assets/about/mobile/image-real-deal.jpg';
 
 const About = () => {
   return ( 
     <main>
-      <section className="about container">
+      <section className="about about-container">
         <div className="about-header">
           <div className="about-header-img">
             <img src={TeamWorkPicture} alt="Team work" />
@@ -21,7 +25,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="infos container">
+      <section className="infos about-container">
         <div className="infos-content">
           <div className="infos-content-img">
             <img src={WomanPicture} alt="Woman stand in front of a wall" />
@@ -36,7 +40,57 @@ const About = () => {
         </div>
       </section>
       <section className="button-location container">
-        
+        <div className="button-location-container">
+          <div className="button-location-content">
+            <div className="work-content-img">
+              <div className="work-img-friendly">
+                <img src={CanadaPicture} alt="Canada Location" />
+              </div>
+            </div>
+            <div className="button-location-text">
+              <h3>Canada</h3>
+              <button className="button">See Location</button>
+            </div>
+          </div>
+          <div className="button-location-content">
+            <div className="work-content-img">
+              <div className="work-img-passionate">
+                <img src={AustraliaPicture} alt="Australia Location" />
+              </div>
+            </div>
+            <div className="button-location-text">
+              <h3>Australia</h3>
+              <button className="button">See Location</button>
+            </div>
+          </div>
+          <div className="button-location-content">
+            <div className="work-content-img">
+              <div className="work-img-resourceful">
+                <img src={UnitedKingdomPicture} alt="United Kingdom location" />
+              </div>
+            </div>
+            <div className="button-location-text">
+              <h3>United Kingdom</h3>
+              <button className="button">See Location</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="infos about-container">
+        <div className="infos-content">
+          <div className="infos-content-img">
+            <img src={HandPicture} alt="Hand holding a photopic" />
+          </div>
+          <div className="infos-content-text">
+            <h2>The real deal</h2>
+            <p className="small-text">
+            As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own.
+            Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. We make design and technology more accessible and give you tools to measure success.<br /><br />
+            We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results.
+            </p>
+          </div>
+        </div>
       </section>
 
       <TalkAbout />
