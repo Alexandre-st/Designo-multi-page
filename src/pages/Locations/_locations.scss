@@ -1,19 +1,64 @@
+@use '../../styles/variables/mixins' as *;
+
 .location {
 
-  &-content {
-    background-color: #FDF3F0;
-    margin-bottom: 4rem;
+  @include mq(tablet) {
+    margin-bottom: 12rem;
+  }
 
+  @include mq(laptop) {
+    margin-bottom: 16rem;
+  }
+
+  &-content {
+    margin-bottom: 4rem;
+    
+    @include mq(tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 3.1rem;
+    }
+
+    @include mq(laptop) {
+      flex-direction: row-reverse;
+      gap: 3rem;
+
+      &:nth-child(2) {
+        flex-direction: row;
+      }
+    }
+
+    &-left {
+      flex: 1;
+    }
+   
     &-right {
       padding: 8rem 2.4rem;
       text-align: center;
+      background-color: #FDF3F0;
       background-image: url("../../assets/shared/desktop/bg-pattern-two-circles.svg");
+      flex: 2;
+
+      @include mq(tablet) {
+        border-radius: 15px;
+        text-align: left;
+        padding: 8.8rem 7.4rem 8.8rem 7.5rem;
+      }
+
+      @include mq(laptop) {
+        padding: 8.8rem 9.5rem;
+      }
 
       h2 {
         color: #E7816B;
         font-size: 3.2rem;
         line-height: 3.6rem;
         text-transform: initial;
+
+        @include mq(tablet) {
+          font-size: 40px;
+          line-height: 48px;    
+        }
       }
     }
   }
@@ -23,6 +68,15 @@
     flex-direction: column;
     gap: 2.4rem;
     margin-top: 2.4rem;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      gap: 10.2rem;
+    }
+
+    @include mq(laptop) {
+      gap: 9.6rem;
+    }
   }
 }
 
@@ -32,4 +86,14 @@
   height: 32rem;
   position: relative;
   z-index: 0;
+
+  @include mq(tablet) {
+    border-radius: 15px;
+    height: 32.6rem;
+  }
+
+  @include mq(laptop) {
+    width: 35rem;
+    height: 32.6rem;
+  }
 }

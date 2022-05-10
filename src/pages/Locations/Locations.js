@@ -7,7 +7,7 @@ const Locations = () => {
 
   return (
     <main>
-      <section className="location">
+      <section className="location new-container">
         <div className="location-container">
           <Location 
               lat={43.7043993969338}

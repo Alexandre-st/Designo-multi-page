@@ -74,6 +74,19 @@ h5 {
   }
 }
 
+.new-container {
+  max-width: 111rem;
+  margin: 0 auto;
+
+  @include mq(tablet) {
+    padding: 0 4rem 0 3.9rem;
+  }
+
+  @include mq(desktop) {
+    padding: 0
+  }
+}
+
 .logo {
   width: 20.2rem;
   height: 2.7rem;
