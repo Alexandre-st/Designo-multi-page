@@ -9,7 +9,8 @@ const Locations = () => {
     <main>
       <section className="location new-container">
         <div className="location-container">
-          <Location 
+          <Location
+              id="canada" 
               lat={43.7043993969338}
               lng={-79.2418294949938}
               zoom={13}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 
-const Location = ({ city, company, street, zip, number, mail, lat, lng, zoom }) => {
+const Location = ({ city, company, street, zip, number, mail, lat, lng, zoom, id }) => {
   
   return ( 
-    <div className="location-content">
+    <div className="location-content" id={id}>
       <div className="location-content-left">
         <MapContainer
           center={[lat, lng]}

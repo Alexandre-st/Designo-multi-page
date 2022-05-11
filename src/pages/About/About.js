@@ -1,21 +1,27 @@
 import React from 'react';
 
 import TalkAbout from '../../components/TalkAbout/TalkAbout';
-import TeamWorkPicture from '../../assets/about/mobile/image-about-hero.jpg';
-import WomanPicture from '../../assets/about/mobile/image-world-class-talent.jpg';
-import CanadaPicture from '../../assets/shared/desktop/illustration-canada.svg';
-import AustraliaPicture from '../../assets/shared/desktop/illustration-australia.svg';
-import UnitedKingdomPicture from '../../assets/shared/desktop/illustration-united-kingdom.svg';
-import HandPicture from '../../assets/about/mobile/image-real-deal.jpg';
+import ButtonLocation from '../../components/ButtonLocation/ButtonLocation';
+import TeamWorkPictureMobile from '../../assets/about/mobile/image-about-hero.jpg';
+import TeamWorkPictureTablet from '../../assets/about/tablet/image-about-hero.jpg';
+import TeamWorkPictureDesktop from '../../assets/about/desktop/image-about-hero.jpg';
+import WomanPictureMobile from '../../assets/about/mobile/image-world-class-talent.jpg';
+import WomanPictureTablet from '../../assets/about/tablet/image-world-class-talent.jpg';
+import WomanPictureDesktop from '../../assets/about/desktop/image-world-class-talent.jpg';
+import HandPictureMobile from '../../assets/about/mobile/image-real-deal.jpg';
+import HandPictureTablet from '../../assets/about/tablet/image-real-deal.jpg';
+import HandPictureDesktop from '../../assets/about/desktop/image-real-deal.jpg';
 
 const About = () => {
   return ( 
     <main>
-      <section className="about about-container">
+      <section className="about new-container">
         <div className="about-header">
-          <div className="about-header-img">
-            <img src={TeamWorkPicture} alt="Team work" />
-          </div>
+          <picture className="about-header-img">
+            <source srcSet={TeamWorkPictureDesktop} media="(min-width: 1024px)" />
+            <source srcSet={TeamWorkPictureTablet}  media="(min-width: 495px)" />
+            <img src={TeamWorkPictureMobile} alt="Team work" />
+          </picture>
           <div className="about-header-text">
             <h1>About Us</h1>
             <p className="small-text">
@@ -25,11 +31,13 @@ const About = () => {
         </div>
       </section>
 
-      <section className="infos about-container">
+      <section className="infos new-container">
         <div className="infos-content">
-          <div className="infos-content-img">
-            <img src={WomanPicture} alt="Woman stand in front of a wall" />
-          </div>
+          <picture className="infos-content-img">
+            <source srcSet={WomanPictureDesktop} media="(min-width: 1024px)" />
+            <source srcSet={WomanPictureTablet}  media="(min-width: 768px)" />
+            <img src={WomanPictureMobile} alt="Woman stand in front of a wall" />
+          </picture>          
           <div className="infos-content-text">
             <h2>World-class talent</h2>
             <p className="small-text">
@@ -39,49 +47,16 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="button-location container">
-        <div className="button-location-container">
-          <div className="button-location-content">
-            <div className="work-content-img">
-              <div className="work-img-friendly">
-                <img src={CanadaPicture} alt="Canada Location" />
-              </div>
-            </div>
-            <div className="button-location-text">
-              <h3>Canada</h3>
-              <button className="button">See Location</button>
-            </div>
-          </div>
-          <div className="button-location-content">
-            <div className="work-content-img">
-              <div className="work-img-passionate">
-                <img src={AustraliaPicture} alt="Australia Location" />
-              </div>
-            </div>
-            <div className="button-location-text">
-              <h3>Australia</h3>
-              <button className="button">See Location</button>
-            </div>
-          </div>
-          <div className="button-location-content">
-            <div className="work-content-img">
-              <div className="work-img-resourceful">
-                <img src={UnitedKingdomPicture} alt="United Kingdom location" />
-              </div>
-            </div>
-            <div className="button-location-text">
-              <h3>United Kingdom</h3>
-              <button className="button">See Location</button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      <ButtonLocation />
 
-      <section className="infos about-container">
-        <div className="infos-content">
-          <div className="infos-content-img">
-            <img src={HandPicture} alt="Hand holding a photopic" />
-          </div>
+      <section className="infos new-container">
+        <div className="infos-content infos-content-reverse">
+          <picture className="infos-content-img-reverse">
+            <source srcSet={HandPictureDesktop} media="(min-width: 1024px)" />
+            <source srcSet={HandPictureTablet}  media="(min-width: 768px)" />
+            <img src={HandPictureMobile} alt="Hand holding a photopic" />
+          </picture>
           <div className="infos-content-text">
             <h2>The real deal</h2>
             <p className="small-text">
