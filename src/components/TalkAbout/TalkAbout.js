@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TalkAbout = () => {
   return ( 
@@ -11,7 +12,11 @@ const TalkAbout = () => {
           </p>
         </div>
         <div className="talk-content-button">
-          <button className="button">Get in touch</button>
+          <Link to="/contact">
+            <button className="button">
+                Get in touch
+            </button>
+          </Link>
         </div>
       </div>
     </section>

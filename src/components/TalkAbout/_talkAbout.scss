@@ -2,6 +2,8 @@
 
 .talk {
   margin-top: 12.1rem;
+  position: relative;
+  z-index: 2;
 
   @include mq(tablet) {
     margin-top: 6.7rem;

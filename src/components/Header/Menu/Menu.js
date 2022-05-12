@@ -25,7 +25,7 @@ const Menu = () => {
               <Link to="/location">
                 <li>LOCATIONS</li>
               </Link>
-              <Link to="/">
+              <Link to="/contact">
                 <li>CONTACT</li>
               </Link>
             </ul>
