@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import WebDesign from './pages/WebDesign/Webdesign';
 import AppDesign from './pages/AppDesign/AppDesign';
 import Locations from './pages/Locations/Locations';
+import Contact from './pages/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 import './styles/index.scss';
@@ -24,6 +25,7 @@ const App = () => {
         <Route exact path="/app-design" element={<AppDesign />} />
         <Route exact path="/graphic-design" element={<GraphicDesign />} />
         <Route exact path="/location" element={<Locations />} />
+        <Route exact path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
