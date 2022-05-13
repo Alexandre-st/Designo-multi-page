@@ -3,7 +3,7 @@ import React from 'react';
 import useInput from '../../hooks/FormHook/FormHook';
 import ButtonLocation from '../../components/ButtonLocation/ButtonLocation';
 import FormInput from './FormInput.js/FormInput';
-
+import ErrorIcon from '../../assets/contact/desktop/icon-error.svg';
 const nameFormat = /^[a-zA-Z,'.\-\s]+$/g;
 const emailFormat = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
 const numericFormat = /^[0-9\b]+$/;
@@ -41,7 +41,7 @@ const Contact = () => {
   const {
     value: messageValue,
     isValid: messageIsValid,
-    errorr: messageError,
+    error: messageError,
     handleChange: handleChangeMessage,
     reset: resetMessage,
   } = useInput(isNotEmpty);
@@ -85,27 +85,33 @@ const Contact = () => {
               label="Name"
               name="name"
               value={nameValue}
-              onChange={handleChangeName}  
+              error={nameError}
+              text="Must be a valid Name"
+              onChange={handleChangeName}
             />
-            { nameError && <p>Must be a valid Name</p>}
+            {/* { nameError && <p className="error">Must be a valid Name {errorImage}</p>} */}
             <FormInput 
               type="email" 
               id="email"
               label="Email Adress"
               name="email"
+              error={emailError}
+              text="Must be a valid Email"
               value={emailValue}
-              onChange={handleChangeEmail}  
+              onChange={handleChangeEmail}
             />
-            { emailError && <p>Must be a valid Email</p>}
+            {/* { emailError && <p className="error">Must be a valid Email {errorImage}</p>} */}
             <FormInput 
               type="number" 
               id="number"
               label="Phone"
               name="number"
+              error={phoneError}
+              text="Must be a valid phone number"
               value={phoneValue}
-              onChange={handleChangePhone}  
+              onChange={handleChangePhone}
             />
-            { phoneError && <p>Must be a valid phone number</p>}
+            {/* { phoneError && <p className="error">Must be a valid phone number {errorImage}</p>} */}
             <div className="form-area">
               <label>Your Message</label>
               <textarea
@@ -114,13 +120,15 @@ const Contact = () => {
                 placeholder="Your message"
                 rows={5}
                 value={messageValue}
+                error={messageError}
+                text="Can't be empty"
                 onChange={handleChangeMessage}
               />           
-            { messageError && <p>Can't be empty</p>}
+              { messageError && <p className="error">Can't be empty {ErrorIcon}</p>}
             </div>
           </div>
           
-          <button className="button" type="submit" >
+          <button className="button" disabled={!formIsValid} type="submit">
             Submit
           </button>
         </form>

@@ -30,7 +30,7 @@ const useInput = (verifyValue) => {
 
   const reset = () => {
     dispatch({ type: RESET });
-  }
+  };
 
   return {
     value: inputState.value,
@@ -38,7 +38,7 @@ const useInput = (verifyValue) => {
     error,
     handleChange,
     reset,
-  }
+  };
 };
 
 export default useInput;
