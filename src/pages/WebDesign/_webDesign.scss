@@ -13,6 +13,7 @@
 
   @include mq(laptop) {
     background-position-x: 100%;
+    z-index: 2;
   }
 
   &-content {

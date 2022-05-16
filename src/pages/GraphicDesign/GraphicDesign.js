@@ -8,11 +8,11 @@ import BrownPicture from '../../assets/graphic-design/desktop/image-change.jpg';
 import BoxedPicture from '../../assets/graphic-design/desktop/image-boxed-water.jpg';
 import SciencePicture from '../../assets/graphic-design/desktop/image-science.jpg';
 import TalkAbout from '../../components/TalkAbout/TalkAbout';
-
+import BackgroundImage from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 
 const GraphicDesign = () => {
   return ( 
-    <main>
+    <main className="background">
       <section className="web container">
         <div className="web-content">
           <h1>Graphic Design</h1>
@@ -21,6 +21,9 @@ const GraphicDesign = () => {
           </p>
         </div>
       </section>
+      <div className="background-image background-image-card">
+          <img src={BackgroundImage} alt="Deco" />
+      </div>
 
       <section className="card container">
         <div className="card-container">

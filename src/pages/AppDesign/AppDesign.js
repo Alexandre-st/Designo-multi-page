@@ -9,10 +9,11 @@ import EyeCamPicture from '../../assets/app-design/desktop/image-eyecam.jpg';
 import FaceItPicture from '../../assets/app-design/desktop/image-faceit.jpg';
 import TodoPicture from '../../assets/app-design/desktop/image-todo.jpg';
 import LoopstudiosPicture from '../../assets/app-design/desktop/image-loopstudios.jpg';
+import BackgroundImage from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 
 const AppDesign = () => {
   return (
-    <main>
+    <main className="background">
     <section className="web container">
         <div className="web-content">
           <h1>App Design</h1>
@@ -21,6 +22,9 @@ const AppDesign = () => {
           </p>
         </div>
       </section>
+      <div className="background-image background-image-card">
+          <img src={BackgroundImage} alt="Deco" />
+      </div>
 
       <section className="card container">
         <div className="card-container">

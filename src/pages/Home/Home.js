@@ -9,11 +9,11 @@ import Resourceful from '../../assets/home/desktop/illustration-resourceful.svg'
 import Friendly from '../../assets/home/desktop/illustration-friendly.svg';
 import Links from '../../components/Links/Links';
 import TalkAbout from '../../components/TalkAbout/TalkAbout';
-import BackgroundImageBotoom from '../../assets/shared/desktop/bg-pattern-leaf.svg';
+import BackgroundImage from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 
 const Home = () => {
   return ( 
-    <main className="background ">
+    <main className="background">
       <section className="hero container">
         <div className="hero-content">
           <div className="hero-content-text">
@@ -29,7 +29,7 @@ const Home = () => {
         </div>
       </section>
         <div className="background-image background-image-top">
-          <img src={BackgroundImageBotoom} alt="Deco" />
+          <img src={BackgroundImage} alt="Deco" />
         </div>
 
       {/* Link Part */}
@@ -91,7 +91,7 @@ const Home = () => {
           </div>
         </div>
         <div className="background-image background-image-bottom">
-          <img src={BackgroundImageBotoom} alt="Deco" />
+          <img src={BackgroundImage} alt="Deco" />
         </div>
       </section>
 

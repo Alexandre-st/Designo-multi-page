@@ -11,10 +11,11 @@ import BuilderProject from '../../assets/web-design/desktop/image-builder.jpg';
 import BlogRProject from '../../assets/web-design/desktop/image-blogr.jpg';
 import CampProject from '../../assets/web-design/desktop/image-camp.jpg';
 import TalkAbout from '../../components/TalkAbout/TalkAbout';
+import BackgroundImage from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 
 const WebDesign = () => {
   return ( 
-    <main>
+    <main className="background">
       <section className="web container">
         <div className="web-content">
           <h1>Web Design</h1>
@@ -23,6 +24,9 @@ const WebDesign = () => {
           </p>
         </div>
       </section>
+      <div className="background-image background-image-card">
+          <img src={BackgroundImage} alt="Deco" />
+      </div>
 
       <section className="card container">
         <div className="card-container">
