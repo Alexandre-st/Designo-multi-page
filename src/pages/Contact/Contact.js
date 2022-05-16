@@ -119,10 +119,8 @@ const Contact = () => {
                 id="message"
                 placeholder="Your message"
                 rows={5}
-                value={messageValue}
-                error={messageError}
-                text="Can't be empty"
                 onChange={handleChangeMessage}
+                value={messageValue}
               />           
               { messageError && <p className="error">Can't be empty {ErrorIcon}</p>}
             </div>

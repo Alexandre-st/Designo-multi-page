@@ -9,10 +9,11 @@ import Resourceful from '../../assets/home/desktop/illustration-resourceful.svg'
 import Friendly from '../../assets/home/desktop/illustration-friendly.svg';
 import Links from '../../components/Links/Links';
 import TalkAbout from '../../components/TalkAbout/TalkAbout';
+import BackgroundImageBotoom from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 
 const Home = () => {
   return ( 
-    <main>
+    <main className="background ">
       <section className="hero container">
         <div className="hero-content">
           <div className="hero-content-text">
@@ -27,6 +28,9 @@ const Home = () => {
           </picture>
         </div>
       </section>
+        <div className="background-image background-image-top">
+          <img src={BackgroundImageBotoom} alt="Deco" />
+        </div>
 
       {/* Link Part */}
       <section className="link container">
@@ -44,8 +48,8 @@ const Home = () => {
       </section>
 
       {/* Work Part */}
-      <section className="work container">
-        <div className="work-container">
+      <section className="work background">
+        <div className="work-container container">
           <div className="work-content">
           <div className="work-content-img">
             <div className="work-img-passionate">
@@ -85,6 +89,9 @@ const Home = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="background-image background-image-bottom">
+          <img src={BackgroundImageBotoom} alt="Deco" />
         </div>
       </section>
 

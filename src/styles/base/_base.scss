@@ -74,6 +74,13 @@ h5 {
   }
 }
 
+.background {
+  @include mq(laptop) {
+    max-width: 144rem;
+    margin: auto;
+  }
+}
+
 .new-container {
   max-width: 111rem;
   
