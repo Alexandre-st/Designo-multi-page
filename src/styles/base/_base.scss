@@ -76,8 +76,13 @@ h5 {
 
 .background {
   @include mq(laptop) {
+    position: relative;
     max-width: 144rem;
     margin: auto;
+
+    &-about {
+      overflow: hidden;
+    }
   }
 }
 

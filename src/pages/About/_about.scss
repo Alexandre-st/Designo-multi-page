@@ -4,6 +4,11 @@
   @include mq(tablet) {
     margin-bottom: 12rem;
   }
+
+  @include mq(laptop) {
+    position: relative;
+    z-index: 2;
+  }
   
   &-header {
     background-color: #E7816B;
@@ -58,6 +63,11 @@
 }
 
 .infos {
+
+  @include mq(laptop) {
+    position: relative;
+    z-index: 2;
+  }
   
   &-content {
     background-color: #FDF3F0;
@@ -67,7 +77,6 @@
 
     @include mq(laptop) {
       display: flex;
-      // height: 64rem;
     }
 
     &-reverse {

@@ -11,10 +11,11 @@ import WomanPictureDesktop from '../../assets/about/desktop/image-world-class-ta
 import HandPictureMobile from '../../assets/about/mobile/image-real-deal.jpg';
 import HandPictureTablet from '../../assets/about/tablet/image-real-deal.jpg';
 import HandPictureDesktop from '../../assets/about/desktop/image-real-deal.jpg';
+import BackgroundImage from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 
 const About = () => {
   return ( 
-    <main>
+    <main className="background background-about">
       <section className="about new-container">
         <div className="about-header">
           <picture className="about-header-img">
@@ -30,6 +31,9 @@ const About = () => {
           </div>
         </div>
       </section>
+      <div className="background-image background-image-top">
+          <img src={BackgroundImage} alt="Deco" />
+        </div>
 
       <section className="infos new-container">
         <div className="infos-content">
@@ -49,6 +53,10 @@ const About = () => {
       </section>
       
       <ButtonLocation />
+
+      <div className="background-image background-image-about">
+        <img src={BackgroundImage} alt="Deco" />
+      </div>
 
       <section className="infos new-container">
         <div className="infos-content infos-content-reverse">
