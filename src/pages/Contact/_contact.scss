@@ -42,6 +42,7 @@
   }
 
   &-area {
+    position: relative;
     border-bottom: 1px solid #FFFFFF;
     margin-bottom: 4rem;
 
@@ -68,9 +69,6 @@
 }
 
 .error {
-  position: absolute;
-  right: 0;
-  top: 0.8rem;
   color: #FFFFFF;    
   display: flex;
   align-items: center;
@@ -78,6 +76,18 @@
   font-size: 12px;
   line-height: 26px;
   font-style: italic;
+
+  &-input {
+  position: absolute;
+  right: 0;
+  top: 0.8rem;
+  }
+
+  &-area {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+  }
 
   img {
     width: 2rem;

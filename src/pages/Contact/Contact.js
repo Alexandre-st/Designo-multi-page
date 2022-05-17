@@ -1,73 +1,44 @@
 import React from 'react';
+import { useFormik } from 'formik';
 
-import useInput from '../../hooks/FormHook/FormHook';
 import ButtonLocation from '../../components/ButtonLocation/ButtonLocation';
-import FormInput from './FormInput.js/FormInput';
-import ErrorIcon from '../../assets/contact/desktop/icon-error.svg';
-const nameFormat = /^[a-zA-Z,'.\-\s]+$/g;
-const emailFormat = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
-const numericFormat = /^[0-9\b]+$/;
-const isValidName = (value) => value.match(nameFormat);
-const isNotEmpty = (value) => value.trim() !== '';
-const isEmail = (value) => value.match(emailFormat);
-const isNumeric = (value) => value.match(numericFormat);
+import ErrorImage from '../../assets/contact/desktop/icon-error.svg';
 
 const Contact = () => {
 
-  const { 
-    value: nameValue,
-    isValid: nameIsValid,
-    error: nameError,
-    handleChange: handleChangeName,
-    reset: resetName
-  } = useInput(isValidName);
+  const ErrorIcon = <img src={ErrorImage} alt="Errpr" />;
 
-  const {
-    value: emailValue,
-    isValid: emailIsValid,
-    error: emailError,
-    handleChange: handleChangeEmail,
-    reset: resetEmail,
-  } = useInput(isEmail);
-
-  const {
-    value: phoneValue,
-    isValid: phoneIsValid,
-    error: phoneError,
-    handleChange: handleChangePhone,
-    reset: resetPhone,
-  } = useInput(isNotEmpty && isNumeric);
-
-  const {
-    value: messageValue,
-    isValid: messageIsValid,
-    error: messageError,
-    handleChange: handleChangeMessage,
-    reset: resetMessage,
-  } = useInput(isNotEmpty);
-
-  let formIsValid = false;
-
-  if (nameIsValid && emailIsValid && phoneIsValid && messageIsValid) {
-    formIsValid = true;
-  }
-
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-
-    if (!formIsValid) {
-      return;
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    },
+    validate : values => {
+      const errors = {}; 
+      if (!values.name) {
+        errors.name = "Can't be empty";
+      }
+      if (!values.email) {
+        errors.email = "Can't be empty";
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+        errors.email = 'Please use a valid email address';
+      }
+      if (!values.phone) {
+        errors.phone = "Can't be empty";
+      }
+      if (!values.message) {
+        errors.message = "Can't be empty'";
+      }
+      return errors;
+    }, 
+    onSubmit: (values) => { 
+      console.log("submit", values); 
+      formik.resetForm({ values : ''});
     }
-
-    console.log('Thank you for contacting us!');
-
-    resetName();
-    resetEmail();
-    resetPhone();
-    resetMessage();
-  };
+  })
   
-
   return ( 
     <main className="main-contact">
       <section className="contact new-container">
@@ -77,56 +48,35 @@ const Contact = () => {
             Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.
           </p>
         </div>
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="form-container">
-            <FormInput 
-              type="name" 
-              id="name"
-              label="Name"
-              name="name"
-              value={nameValue}
-              error={nameError}
-              text="Must be a valid Name"
-              onChange={handleChangeName}
-            />
-            {/* { nameError && <p className="error">Must be a valid Name {errorImage}</p>} */}
-            <FormInput 
-              type="email" 
-              id="email"
-              label="Email Adress"
-              name="email"
-              error={emailError}
-              text="Must be a valid Email"
-              value={emailValue}
-              onChange={handleChangeEmail}
-            />
-            {/* { emailError && <p className="error">Must be a valid Email {errorImage}</p>} */}
-            <FormInput 
-              type="number" 
-              id="number"
-              label="Phone"
-              name="number"
-              error={phoneError}
-              text="Must be a valid phone number"
-              value={phoneValue}
-              onChange={handleChangePhone}
-            />
-            {/* { phoneError && <p className="error">Must be a valid phone number {errorImage}</p>} */}
-            <div className="form-area">
-              <label>Your Message</label>
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Your message"
-                rows={5}
-                onChange={handleChangeMessage}
-                value={messageValue}
-              />           
-              { messageError && <p className="error">Can't be empty {ErrorIcon}</p>}
-            </div>
+        <form className="form" onSubmit={formik.handleSubmit}>
+        <div className="form-input">
+          <label htmlFor="name">Name</label>
+          <input type="text" placeholder="Name" {...formik.getFieldProps("name")} />
+          {formik.touched.name && formik.errors.name && <p className="error error-input">{formik.errors.name}{ErrorIcon}</p>}
+        </div>
+        <div className="form-input">
+          <label htmlFor="email">Email</label>
+          <input type="text" placeholder="Email" {...formik.getFieldProps("email")} />
+          {formik.touched.email && formik.errors.email && <p className="error error-input">{formik.errors.email}{ErrorIcon}</p>}
+        </div>
+        <div className="form-input">
+          <label htmlFor="phone">Phone</label>
+          <input type="text" placeholder="Phone" {...formik.getFieldProps("phone")} />
+          {formik.touched.phone && formik.errors.phone && <p className="error error-input">{formik.errors.phone} {ErrorIcon}</p>}
+        </div>
+
+        <div className="form-area">
+          <label htmlFor="message">Your Message</label>
+          <textarea
+            type="text"
+            placeholder="Your message"
+            rows={5}
+            {...formik.getFieldProps("message")}
+          />           
+          {formik.touched.message && formik.errors.message && <p className="error error-area">{formik.errors.message}{ErrorIcon}</p>}
           </div>
           
-          <button className="button" disabled={!formIsValid} type="submit">
+          <button className="button" type="submit">
             Submit
           </button>
         </form>
