@@ -2,11 +2,12 @@ import React from 'react';
 import { useFormik } from 'formik';
 
 import ButtonLocation from '../../components/ButtonLocation/ButtonLocation';
+import BackgroundImage from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 import ErrorImage from '../../assets/contact/desktop/icon-error.svg';
 
 const Contact = () => {
 
-  const ErrorIcon = <img src={ErrorImage} alt="Errpr" />;
+  const ErrorIcon = <img src={ErrorImage} alt="Error" />;
 
   const formik = useFormik({
     initialValues: {
@@ -29,7 +30,7 @@ const Contact = () => {
         errors.phone = "Can't be empty";
       }
       if (!values.message) {
-        errors.message = "Can't be empty'";
+        errors.message = "Can't be empty";
       }
       return errors;
     }, 
@@ -55,13 +56,13 @@ const Contact = () => {
           {formik.touched.name && formik.errors.name && <p className="error error-input">{formik.errors.name}{ErrorIcon}</p>}
         </div>
         <div className="form-input">
-          <label htmlFor="email">Email</label>
-          <input type="text" placeholder="Email" {...formik.getFieldProps("email")} />
+          <label htmlFor="email">Email Address</label>
+          <input type="text" placeholder="Email Adress" {...formik.getFieldProps("email")} />
           {formik.touched.email && formik.errors.email && <p className="error error-input">{formik.errors.email}{ErrorIcon}</p>}
         </div>
         <div className="form-input">
           <label htmlFor="phone">Phone</label>
-          <input type="text" placeholder="Phone" {...formik.getFieldProps("phone")} />
+          <input type="text" placeholder="Phone"  {...formik.getFieldProps("phone")} />
           {formik.touched.phone && formik.errors.phone && <p className="error error-input">{formik.errors.phone} {ErrorIcon}</p>}
         </div>
 
@@ -83,6 +84,9 @@ const Contact = () => {
       </section>
 
       <ButtonLocation />
+      <div className="background-image background-image-bottom">
+          <img src={BackgroundImage} alt="Deco" />
+        </div>
     </main>
   );
 }

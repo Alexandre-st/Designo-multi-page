@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import CanadaPicture from '../../assets/shared/desktop/illustration-canada.svg';
 import AustraliaPicture from '../../assets/shared/desktop/illustration-australia.svg';
@@ -17,9 +17,9 @@ const ButtonLocation = () => {
           </div>
           <div className="button-location-text">
             <h3>Canada</h3>
-            {/* <Link> */}
+            <Link to="/location">
               <button className="button button-orange">See Location</button>
-            {/* </Link> */}
+            </Link>
           </div>
         </div>
         <div className="button-location-content">
@@ -30,7 +30,9 @@ const ButtonLocation = () => {
           </div>
           <div className="button-location-text">
             <h3>Australia</h3>
-            <button className="button button-orange">See Location</button>
+            <Link to="/location">
+              <button className="button button-orange">See Location</button>
+            </Link>
           </div>
         </div>
         <div className="button-location-content">
@@ -41,7 +43,9 @@ const ButtonLocation = () => {
           </div>
           <div className="button-location-text">
             <h3>United Kingdom</h3>
-            <button className="button button-orange">See Location</button>
+            <Link to="/location">
+              <button className="button button-orange">See Location</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,19 +1,57 @@
+@use "../../styles/variables/mixins" as *;
+
 .contact {
   background-color: #E7816B;
   color: #FFFFFF;
+  background-image: url("../../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: -10rem 0;
+
+  @include mq(tablet) {
+    background-image: url("../../assets/contact/desktop/bg-pattern-hero-desktop.svg");
+    background-position: -10rem -5rem;
+    border-radius: 15px;
+  }
+
+  @include mq(laptop) {
+    display: flex;
+    gap: 9.5rem;
+    background-position: 0 -10rem;
+  }
 
   &-text {
     padding: 7.2rem 2.4rem 4.8rem 2.4rem;
     text-align: center;
 
+    @include mq(tablet) {
+      padding: 7.1rem 5.8rem 4rem 5.8rem;
+      text-align: left;
+    }
+
+    @include mq(laptop) {
+      padding: 13.5rem 0 16.1rem 9.5rem;
+      flex: 2;
+    }
+
     h1 {
       margin-bottom: 2.4rem;
+      text-transform: initial;
     }
   }
 }
 
 .form {
-  padding:0 2.4rem 4rem 2.4rem;
+  padding: 0 2.4rem 7.2rem 2.4rem;
+
+  @include mq(tablet) {
+    padding: 0 5.8rem 7.1rem 5.8rem;
+  }
+
+  @include mq(laptop) {
+    padding: 5.5rem 9.5rem 5.4rem 0;
+    flex: 2;
+  }
+
 
   &-input {
     height: 3.8rem;
@@ -25,10 +63,19 @@
       width: 100%;
       font-size: 1.5rem;
       line-height: 2.6rem;
-      // margin-left: 1.32rem;
       padding-left: 1.32rem;
       margin-top: -1rem;
       height: 2.6rem;
+
+      @include mq(tablet) {
+        padding-left: 2.41rem;
+        margin-top: -2rem;
+        height: 3.8rem;
+      }
+
+      @include mq(laptop) {
+        padding-left: 1.6rem;
+      }
 
       &::placeholder {
         color: #FFFFFF;
@@ -50,7 +97,15 @@
       width: 100%;
       font-size: 1.5rem;
       line-height: 2.6rem;
-      margin-left: 1.32rem;
+      padding-left: 1.32rem;
+
+      @include mq(tablet) {
+        padding-left: 2.41rem;
+      }
+
+      @include mq(laptop) {
+        padding-left: 1.6rem;
+      }
       
       &::placeholder {
         color: #FFFFFF;
@@ -65,6 +120,10 @@
 
   button {
     margin: auto;
+
+    @include mq(tablet) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -94,3 +153,21 @@
     height: 2rem;
   }
 }
+
+// To fix some errors of style
+.main-contact {
+  position: relative;
+  max-width: 144rem;
+  margin: auto;
+
+  .button-location {
+    padding-bottom: 12rem;
+  }
+
+  .background-image-bottom {
+    top: 78.5rem;
+    transform: rotate(0);
+    right: 0;
+  }
+}
+

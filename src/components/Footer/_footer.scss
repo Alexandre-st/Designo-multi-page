@@ -9,6 +9,8 @@
   }
 
   @include mq(laptop) {
+    position: relative;
+    z-index: 2;
     margin-top: -7.2rem;
   }
 
