@@ -3,13 +3,13 @@
 .footer {
   background-color: #1D1C1E;
   margin-top: -18.9rem;
+  position: relative;
 
   @include mq(tablet) {
     margin-top: -8.6rem;
   }
 
   @include mq(laptop) {
-    position: relative;
     z-index: 2;
     margin-top: -7.2rem;
   }
@@ -60,6 +60,27 @@
     }
   }
 
+  &-border {
+    position: absolute;
+    border: 1px solid #FFFFFF;
+    top: 31rem;
+    left: 2.4rem;
+    right: 2.4rem;
+    opacity: 0.1;
+
+    @include mq(tablet) {
+      top: 23rem;
+      left: 3.9rem;
+      right: 3.9rem;
+    }
+
+    @include mq(laptop) {
+      top: 21rem;
+      left: 0;
+      right: 0;
+    }
+  }
+
   &-content {
     display: flex;
     flex-direction: column;
@@ -96,6 +117,11 @@
 
       img {
         width: fit-content;
+
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
       }
     }
   }

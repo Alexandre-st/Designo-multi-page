@@ -71,6 +71,17 @@
         padding: 3.2rem;
       }
 
+      &:hover {
+        background-color: #E7816B;
+        color: #FFFFFF;
+        cursor: pointer;
+        border-radius: 0 0 15px 15px;
+
+        h3 {
+          color: #FFFFFF;
+        }
+      }
+
       h3 {
         color: #E7816B;
         letter-spacing: 5px;

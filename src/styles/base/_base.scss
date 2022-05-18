@@ -124,6 +124,10 @@ h5 {
   font-size: 1.4rem;
   line-height: 1.4rem;
   letter-spacing: 2px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .button {
@@ -137,6 +141,11 @@ h5 {
   line-height: 2.2rem;
   letter-spacing: 1px;
   font-weight: 500;
+
+  &:hover {
+    background-color: #FFAD9B;
+    color: #FFFFFF;
+  }
 
   &-orange {
     background-color: #E7816B;

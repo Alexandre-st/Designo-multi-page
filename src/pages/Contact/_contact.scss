@@ -59,6 +59,16 @@
     margin-bottom: 2.5rem;
     position: relative;
 
+    &:hover, &:focus {
+      border-bottom: 2px solid #FFFFFF;
+
+      input {
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+    }
+
     input {
       width: 100%;
       font-size: 1.5rem;
@@ -92,6 +102,16 @@
     position: relative;
     border-bottom: 1px solid #FFFFFF;
     margin-bottom: 4rem;
+
+    &:hover, &:focus {
+      border-bottom: 2px solid #FFFFFF;
+
+      textarea {
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+    }
 
     textarea {
       width: 100%;
