@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 
 import ButtonLocation from '../../components/ButtonLocation/ButtonLocation';
+import { Modal } from "../../components/Modal/Modal";
 import BackgroundImage from '../../assets/shared/desktop/bg-pattern-leaf.svg';
 import ErrorImage from '../../assets/contact/desktop/icon-error.svg';
 
@@ -35,10 +36,17 @@ const Contact = () => {
       return errors;
     }, 
     onSubmit: (values) => { 
-      console.log("submit", values); 
+      console.log("submit", values);
+      openModal(); 
       formik.resetForm({ values : ''});
     }
-  })
+  });
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
   
   return ( 
     <main className="main-contact">
@@ -82,7 +90,8 @@ const Contact = () => {
           </button>
         </form>
       </section>
-
+      {showModal ? <Modal setShowModal={setShowModal} /> : null}
+      {/* { console.log(showModal) } */}
       <ButtonLocation />
       <div className="background-image background-image-bottom">
           <img src={BackgroundImage} alt="Deco" />
