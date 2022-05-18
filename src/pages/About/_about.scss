@@ -12,14 +12,21 @@
   
   &-header {
     background-color: #E7816B;
+    background-image: url("../../assets/about/mobile/bg-pattern-hero-about-mobile.svg");
+    background-position: -50rem 18rem;
+    background-repeat: no-repeat;
+
     @include mq(tablet) {
       border-radius: 15px;
+      background-image: url("../../assets/about/desktop/bg-pattern-hero-about-desktop.svg");
+      background-position: -15rem -12rem;
     }
 
     @include mq(laptop) {
       display: flex;
       flex-direction: row-reverse;
       height: 48rem;
+      background-position: 0rem -16rem;
     }
 
     &-img {
@@ -71,17 +78,24 @@
   
   &-content {
     background-color: #FDF3F0;
+    background-image: url("../../assets/shared/desktop/bg-pattern-three-circles.svg");
+    background-position: 0 32rem;
+    background-repeat: no-repeat;
+
     @include mq(tablet) {
       border-radius: 15px;
+      background-position: 9rem 10rem;
     }
 
     @include mq(laptop) {
       display: flex;
+      background-position: 34rem 6rem;
     }
 
     &-reverse {
       @include mq(laptop) {
         flex-direction: row-reverse;
+        background-position: 0rem 6rem;
       }
     }
 
