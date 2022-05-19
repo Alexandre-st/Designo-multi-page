@@ -17,9 +17,11 @@ const ButtonLocation = () => {
           </div>
           <div className="button-location-text">
             <h3>Canada</h3>
-            <Link to="/location">
-              <button className="button button-orange">See Location</button>
-            </Link>
+            <button className="button button-orange">
+              <Link to="/location">
+                See Location
+              </Link>
+            </button>
           </div>
         </div>
         <div className="button-location-content">
@@ -30,9 +32,11 @@ const ButtonLocation = () => {
           </div>
           <div className="button-location-text">
             <h3>Australia</h3>
-            <Link to="/location">
-              <button className="button button-orange">See Location</button>
-            </Link>
+            <button className="button button-orange">
+              <Link to="/location">
+                See Location
+              </Link>
+            </button>
           </div>
         </div>
         <div className="button-location-content">
@@ -43,9 +47,11 @@ const ButtonLocation = () => {
           </div>
           <div className="button-location-text">
             <h3>United Kingdom</h3>
-            <Link to="/location">
-              <button className="button button-orange">See Location</button>
-            </Link>
+            <button className="button button-orange">
+              <Link to="/location">
+                See Location
+              </Link>
+            </button>
           </div>
         </div>
       </div>

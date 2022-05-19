@@ -6,7 +6,7 @@ const Link = ({ title, text, linkStyle }) => {
     <div className={linkStyle}>
       <div className="link-content">
         <h2 className="link-content-title">{title}</h2>
-        <h4>{text}<i><img src={Arrow} alt="Arrow" /></i></h4>
+        <p>{text}<i><img src={Arrow} alt="Arrow" /></i></p>
       </div>
     </div>
   );
