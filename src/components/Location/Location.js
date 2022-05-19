@@ -31,7 +31,7 @@ const Location = ({ city, company, street, zip, number, mail, lat, lng, zoom, id
           <div className="location-text-right">
             <p className="small-text"><strong>Contact</strong></p>
             <p className="small-text">P : {number}</p>
-            <p className="small-text">M :{mail}</p>
+            <p className="small-text">M : {mail}</p>
           </div>
         </div>
       </div>

@@ -12,11 +12,11 @@ const TalkAbout = () => {
           </p>
         </div>
         <div className="talk-content-button">
-          <button className="button">
+          <div role="button" className="button">
             <Link to="/contact">
               Get in touch
             </Link>
-          </button>
+          </div>
         </div>
       </div>
     </section>

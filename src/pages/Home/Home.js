@@ -19,7 +19,7 @@ const Home = () => {
           <div className="hero-content-text">
             <h1>Award-winning custom designs and digital branding solutions</h1>
             <p className="small-text">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-            <button className="button">Learn More</button>
+            <div role="button" className="button">Learn More</div>
           </div>
           <picture className="hero-content-img">
             <source srcSet={CellularDesktop} media="(min-width: 1024px)" />
