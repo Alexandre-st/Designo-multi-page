@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alexandre-st/Designo-multi-page"
+    "url": "https://github.com/Alexandre-st/Designo-multi-page",
+    "url-live": "https://alexandre-st-designo.netlify.app"
   },
   "author": "Alexandre-st",
   "license": "ISC",

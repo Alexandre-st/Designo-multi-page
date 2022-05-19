@@ -79,9 +79,9 @@
       right: 0;
       top: 47.2rem;
       margin: 0 auto;
-      filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
-
+            
       @include mq(tablet) {
+        filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
         top: 46.2rem;
       }
 
@@ -208,7 +208,7 @@
       }
 
       &-card {
-        top: 28.1rem;
+        top: 14rem;
       }
 
       &-about {
