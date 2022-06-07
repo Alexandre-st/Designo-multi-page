@@ -21,7 +21,8 @@ const Locations = () => {
               number="+1 253-863-8967"
               mail="contact@designo.co"
             />
-            <Location 
+            <Location
+              id="australia" 
               lat={-33.109334989573924}
               lng={151.64546848639955}
               zoom={12}
@@ -33,6 +34,7 @@ const Locations = () => {
               mail="contact@designo.au"
             />
             <Location
+              id="united-kingdom"
               lat={53.73417652344115}
               lng={-1.3167944591659246}
               zoom={14}

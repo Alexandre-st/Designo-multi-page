@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import CanadaPicture from '../../assets/shared/desktop/illustration-canada.svg';
 import AustraliaPicture from '../../assets/shared/desktop/illustration-australia.svg';
@@ -18,9 +18,9 @@ const ButtonLocation = () => {
           <div className="button-location-text">
             <h3>Canada</h3>
             <div role="button" className="button button-orange">
-              <Link to="/location">
+              <HashLink smooth to="/location/#canada">
                 See Location
-              </Link>
+              </HashLink>
             </div>
           </div>
         </div>
@@ -33,9 +33,9 @@ const ButtonLocation = () => {
           <div className="button-location-text">
             <h3>Australia</h3>
             <div role="button" className="button button-orange">
-              <Link to="/location">
+              <HashLink smooth to="/location/#australia">
                 See Location
-              </Link>
+              </HashLink>
             </div>
           </div>
         </div>
@@ -48,9 +48,9 @@ const ButtonLocation = () => {
           <div className="button-location-text">
             <h3>United Kingdom</h3>
             <div role="button" className="button button-orange">
-              <Link to="/location">
+              <HashLink smooth to="/location/#united-kingdom">
                 See Location
-              </Link>
+              </HashLink>
             </div>
           </div>
         </div>

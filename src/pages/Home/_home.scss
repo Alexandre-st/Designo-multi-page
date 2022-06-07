@@ -63,7 +63,7 @@
         }
       }
 
-      button {
+      div.button {
         margin: auto;
 
         @include mq(laptop) {
